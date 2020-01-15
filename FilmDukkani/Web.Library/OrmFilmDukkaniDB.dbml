@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="FilmDukkaniDB" Class="OrmFilmDukkaniDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-6VGIM5M\SQL_2014;Initial Catalog=FilmDukkaniDB;User ID=sa" SettingsObjectName="Web.Library.Properties.Settings" SettingsPropertyName="FilmDukkaniDBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Adresler" Member="Adreslers">
+    <Type Name="Adresler">
+      <Column Name="AdresID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Cadde" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Sokak" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Mahalle" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="BinaNo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Kat" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DaireNo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Ilce" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Il" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PostaKodu" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Association Name="Adresler_Calisanlar" Member="Calisanlars" ThisKey="AdresID" OtherKey="AdresID" Type="Calisanlar" />
+      <Association Name="Adresler_Musteriler" Member="Musterilers" ThisKey="AdresID" OtherKey="AdresID" Type="Musteriler" />
+      <Association Name="Adresler_Subeler" Member="Subelers" ThisKey="AdresID" OtherKey="AdresID" Type="Subeler" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Yonetmenler" Member="Yonetmenlers">
+    <Type Name="Yonetmenler">
+      <Column Name="YonetmenID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="YonetmenAdi" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="YonetmenSoyadi" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Yonetmenler_Filmler" Member="Filmlers" ThisKey="YonetmenID" OtherKey="YonetmenID" Type="Filmler" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Calisanlar" Member="Calisanlars">
+    <Type Name="Calisanlar">
+      <Column Name="CalisanID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CalisanAdi" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CalisanSoyadi" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Cinsiyet" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Telefon" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Pozisyon" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="AdresID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SubeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Fotograf" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="Sifre" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Adresler_Calisanlar" Member="Adresler" ThisKey="AdresID" OtherKey="AdresID" Type="Adresler" IsForeignKey="true" />
+      <Association Name="Subeler_Calisanlar" Member="Subeler" ThisKey="SubeID" OtherKey="SubeID" Type="Subeler" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Filmler" Member="Filmlers">
+    <Type Name="Filmler">
+      <Column Name="FilmID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FilmAdi" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="YonetmenID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="KategoriID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="OyuncuID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Ozet" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="YapimYili" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Resim" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="Odul" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SubeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Sure" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Fiyat" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="StokMiktari" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Fragman" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Yonetmenler_Filmler" Member="Yonetmenler" ThisKey="YonetmenID" OtherKey="YonetmenID" Type="Yonetmenler" IsForeignKey="true" />
+      <Association Name="Kategoriler_Filmler" Member="Kategoriler" ThisKey="KategoriID" OtherKey="KategoriID" Type="Kategoriler" IsForeignKey="true" />
+      <Association Name="Oyuncular_Filmler" Member="Oyuncular" ThisKey="OyuncuID" OtherKey="OyuncuID" Type="Oyuncular" IsForeignKey="true" />
+      <Association Name="Subeler_Filmler" Member="Subeler" ThisKey="SubeID" OtherKey="SubeID" Type="Subeler" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Kategoriler" Member="Kategorilers">
+    <Type Name="Kategoriler">
+      <Column Name="KategoriID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="KategoriAdi" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Kategoriler_Filmler" Member="Filmlers" ThisKey="KategoriID" OtherKey="KategoriID" Type="Filmler" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Musteriler" Member="Musterilers">
+    <Type Name="Musteriler">
+      <Column Name="MusteriID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MusteriAdi" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MusteriSoyadi" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="AdresID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Telefon" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Sifre" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Adresler_Musteriler" Member="Adresler" ThisKey="AdresID" OtherKey="AdresID" Type="Adresler" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Oyuncular" Member="Oyunculars">
+    <Type Name="Oyuncular">
+      <Column Name="OyuncuID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="OyuncuAdi" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="OyuncuSoyadi" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Oyuncular_Filmler" Member="Filmlers" ThisKey="OyuncuID" OtherKey="OyuncuID" Type="Filmler" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Subeler" Member="Subelers">
+    <Type Name="Subeler">
+      <Column Name="SubeID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SubeAdi" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="AdresID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Subeler_Calisanlar" Member="Calisanlars" ThisKey="SubeID" OtherKey="SubeID" Type="Calisanlar" />
+      <Association Name="Subeler_Filmler" Member="Filmlers" ThisKey="SubeID" OtherKey="SubeID" Type="Filmler" />
+      <Association Name="Adresler_Subeler" Member="Adresler" ThisKey="AdresID" OtherKey="AdresID" Type="Adresler" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

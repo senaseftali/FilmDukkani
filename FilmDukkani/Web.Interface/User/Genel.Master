@@ -1,0 +1,230 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Genel.master.cs" Inherits="Web.Interface.Genel" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>FİLMDÜKKANI</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="../Script/style.css" type="text/css" media="all" />
+    <script type="text/javascript" src="../js/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-func.js"></script>
+    <%--  [if IE 6]><link rel="stylesheet" href="css/ie6.css" type="text/css" media="all" /><![endif]--%>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style2 {
+            width: 800px;
+            float: left;
+            text-align: left;
+        }
+
+        .auto-style3 {
+            width: 100%;
+            float: left;
+            text-align: left;
+            background-color:azure;
+            color:black;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <!-- START PAGE SOURCE -->
+        <div id="shell">
+            <div id="header">
+                <h1 id="logo"><a href="Default.aspx">FİLMDÜKKANI</a></h1>
+
+                <div id="navigation">
+                    <ul>
+                        <li><a class="active" href="Default.aspx">ANASAYFA</a></li>
+                        <li><a href="News.aspx">HABERLER</a></li>
+                        <li><a href="InTheaters.aspx">VİZYONDAKİ FİLMLER</a></li>
+                        <li><a href="Interview.aspx">RÖPORTAJLAR</a></li>
+                        <li><a href="Contact.aspx">İLETİŞİM</a></li>      
+                        <li>
+                            <asp:Label ID="lblKullaniciAdi" runat="server"><%= Session["Kullanici"] %></asp:Label></li>                                 
+                    </ul>
+                   
+                </div>
+
+                <div id="sub-navigation">
+                    <ul>
+                        <li><a href="Films.aspx">FİLMLER</a></li>
+                        <li><a href="TopRated.aspx">EN İYİLER</a></li>
+                        <li><a href="ComparedFilms.aspx">KARŞILAŞTIRILACAK FİLMLER</a></li>
+                        <li><a href="MyCart.aspx">SEPETİM</a></li>
+                    </ul>
+                    <div id="search">
+                        <label for="search-field" style="text-align: center;">SİTEDE ARA:</label>
+                        <%--   <input type="text" name="search field" value="Film Ara..." id="search-field" class="blink search-field" />  --%>
+                        <asp:TextBox ID="txtSearch" runat="server" CssClass="blink search-field" placeholder="Film Ara..."></asp:TextBox>
+                        <asp:ImageButton ID="imgSearch" runat="server" ImageUrl="~/images/icons/search3.ico" class="search_bt" OnClick="imgSearch_Click" />
+                    </div>
+                </div>
+            </div>
+
+            <div id="main">
+                <div style="width: 800px; float: left;">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+
+                <div class="left_content">
+                    <div class="title_box">
+                        Kategoriler
+                    </div>
+
+                    <ul class="left_menu">
+                        <asp:Repeater ID="rptCategories" runat="server" DataSourceID="FilmDukkaniDB">
+                            <ItemTemplate>
+                                <li class="odd"><a href='<%# ResolveClientUrl("~/User/Films.aspx?KategoriID=" + Eval("KategoriID").ToString()) %>'><%# Eval("KategoriAdi") %></a></li>
+                            </ItemTemplate>
+
+                            <AlternatingItemTemplate>
+                                <li class="even"><a href='<%# ResolveClientUrl("~/User/Films.aspx?KategoriID=" + Eval("KategoriID").ToString()) %>'><%# Eval("KategoriAdi") %></a></li>
+                            </AlternatingItemTemplate>
+                        </asp:Repeater>
+                        <asp:SqlDataSource ID="FilmDukkaniDB" runat="server" ConnectionString="<%$ ConnectionStrings:FilmDukkaniDBConnectionString %>" SelectCommand="SELECT * FROM [Kategoriler] order by KategoriAdi Asc"></asp:SqlDataSource>
+                    </ul>
+
+                    <div class="title_box">
+                        Kullanici Paneli
+                    </div>
+
+                    <div class="border_box">
+                        <table class="auto-style3">
+                            <tr>
+                                <td align="center" style="color: White; background-color: #990000; font-size: 1em; font-weight: bold;">Giriş</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <asp:Label ID="UserNameLabel" runat="server" AssociatedControlID="UserName">Kullanıcı Adı:</asp:Label></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <asp:TextBox ID="UserName" runat="server" Font-Size="1em"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="UserNameRequired" runat="server" ControlToValidate="UserName" ErrorMessage="User Name is required." ToolTip="User Name is required." ValidationGroup="login">*</asp:RequiredFieldValidator>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <asp:Label ID="PasswordLabel" runat="server" AssociatedControlID="Password">Şifre:</asp:Label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <asp:TextBox ID="Password" runat="server" Font-Size="1em" TextMode="Password"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="PasswordRequired" runat="server" ControlToValidate="Password" ErrorMessage="Password is required." ToolTip="Password is required." ValidationGroup="login">*</asp:RequiredFieldValidator>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <asp:CheckBox ID="RememberMe" runat="server" Text="Beni Hatırla!" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right">
+                                    <asp:Button ID="LoginButton" runat="server" BackColor="White" BorderColor="#CC9966" BorderStyle="Solid" BorderWidth="1px" CommandName="Login" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#990000" Text="Giriş" ValidationGroup="login" OnClick="LoginButton_Click" Style="height: 18px; width: 52px" />
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                </div>
+
+                <table class="auto-style2">
+                    <tr>
+                        <td>
+                            <div id="news">
+                                <div class="head">
+                                    <h3>Haberler</h3>
+                                    <p class="text-right" style="background-color: #725050"><a href="News.aspx">Hepsini Gör</a></p>
+                                </div>
+                                <div class="content" style="float: left;">
+                                    <asp:Repeater ID="rptHaber" runat="server">
+                                        <ItemTemplate>
+                                            <div style="background-color: #839a4a">
+                                                <h3 style="color: #ea0f0f"><%#Eval("Title") %></h3>
+                                                <br />
+                                                <p class="date">
+                                                    <%#string.Format("{0:dd/MM/yyyy}",Eval("PublishDate")) %>
+                                                </p>
+                                                <br />
+                                                <p><%# Eval("Description")%></p>
+                                                <br />
+                                                <a href='<%#Eval("Link") %>' target="_blank" style="color: #1e6dc3">Devamını Gör...</a>
+                                            </div>
+                                        </ItemTemplate>
+                                        <AlternatingItemTemplate>
+                                            <div style="background-color: #808080">
+                                                <h3 style="color: #ea0f0f"><%#Eval("Title") %></h3>
+                                                <br />
+                                                <p class="date">
+                                                    <%#string.Format("{0:dd/MM/yyyy}",Eval("PublishDate")) %>
+                                                </p>
+                                                <br />
+                                                <p><%#Eval("Description") %></p>
+                                                <br />
+                                                <a href='<%#Eval("Link") %>' target="_blank" style="color: #1e6dc3">Devamını Gör...</a>
+                                            </div>
+                                        </AlternatingItemTemplate>
+                                    </asp:Repeater>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div id="coming">
+                                <div class="head">
+                                    <h3>RÖPORTAJLAR</h3>
+                                    <p class="text-right" style="background-color: #725050"><a href="Interview.aspx">Hepsini Gör</a></p>
+                                </div>
+                                <div class="content">
+                                    <asp:Repeater ID="rptRoportaj" runat="server">
+                                        <ItemTemplate>
+                                            <div style="background-color: #808080">
+                                                <h3 style="color: #ea0f0f"><%#Eval("Title") %></h3>
+                                                <br />
+                                                <p class="date">
+                                                    <%#string.Format("{0:dd/MM/yyyy}",Eval("PublishDate")) %>
+                                                </p>
+                                                <br />
+                                                <p><%#Eval("Description").ToString().Substring(0, 500)%></p>
+                                                <br />
+                                                <a href='<%#Eval("Link") %>' target="_blank" style="color: #1e6dc3">Devamını Gör...</a>
+                                            </div>
+                                        </ItemTemplate>
+                                        <AlternatingItemTemplate>
+                                            <div style="background-color: #839a4a">
+                                                <h3 style="color: #ea0f0f"><%#Eval("Title") %></h3>
+                                                <br />
+                                                <p class="date">
+                                                    <%#string.Format("{0:dd/MM/yyyy}",Eval("PublishDate")) %>
+                                                </p>
+                                                <br />
+                                                <p><%#Eval("Description").ToString().Substring(0, 500)%></p>
+                                                <br />
+                                                <a href='<%#Eval("Link") %>' target="_blank" style="color: #1e6dc3">Devamını Gör...</a>
+                                            </div>
+                                        </AlternatingItemTemplate>
+                                    </asp:Repeater>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
+
+
+                <div class="cl">&nbsp;</div>
+            </div>
+
+            <div id="footer">
+                <p class="lf">Copyright &copy; 2017 <a href="#">Site İsmi</a> - Her hakkı saklıdır.</p>
+                <div style="clear: both;"></div>
+            </div>
+            <!-- END PAGE SOURCE -->
+        </div>
+    </form>
+</body>
+</html>

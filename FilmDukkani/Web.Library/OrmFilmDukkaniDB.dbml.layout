@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 13.875" name="OrmFilmDukkaniDB">
+  <DataContextMoniker Name="/OrmFilmDukkaniDBDataContext" />
+  <nestedChildShapes>
+    <classShape Id="41937ed2-b4f7-4654-b2c8-a7b2425c360a" absoluteBounds="0.75, 5, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/OrmFilmDukkaniDBDataContext/Adresler" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cd65947e-ca94-4bc7-a7f5-837905aa17f5" absoluteBounds="0.765, 5.46, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="dce51401-b626-4bbb-be25-d01673acd76c" absoluteBounds="3.5, 10.125, 2, 1.3862939453124987">
+      <DataClassMoniker Name="/OrmFilmDukkaniDBDataContext/Yonetmenler" />
+      <nestedChildShapes>
+        <elementListCompartment Id="52e5e05d-5285-4987-a29c-2b221cf815ad" absoluteBounds="3.515, 10.585, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="da329667-b1c7-4721-8004-156406cd20a4" absoluteBounds="6.25, 7.5, 2, 2.9247054036458318">
+      <DataClassMoniker Name="/OrmFilmDukkaniDBDataContext/Calisanlar" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a1efe05b-a6fa-4373-b5c2-12800e555e65" absoluteBounds="6.265, 7.96, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b4c46ac6-96bf-4f76-ae99-a08c5068eb63" absoluteBounds="6.25, 3.125, 2, 3.5016097005208326">
+      <DataClassMoniker Name="/OrmFilmDukkaniDBDataContext/Filmler" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b8199cdc-40f0-4da2-a9c2-697e32b68a95" absoluteBounds="6.265, 3.585, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8e46eab9-f5ab-43a0-b0e1-2651e3e1bf48" absoluteBounds="3.5, 2.125, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/OrmFilmDukkaniDBDataContext/Kategoriler" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e533530f-6908-4e62-bc3e-49d316360187" absoluteBounds="3.515, 2.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f175ab25-43c1-4f26-9ce0-cb47974b7ce2" absoluteBounds="3.5, 6.375, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/OrmFilmDukkaniDBDataContext/Musteriler" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6b9896db-2171-4bfa-93e9-8fcad8870fa8" absoluteBounds="3.515, 6.835, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="00aae229-99e4-4e35-b4cf-6b7b5f13ee8c" absoluteBounds="3.5, 12.25, 2, 1.3862939453124987">
+      <DataClassMoniker Name="/OrmFilmDukkaniDBDataContext/Oyuncular" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f0c1a0e4-84a3-4690-ad7f-f76004dc01bc" absoluteBounds="3.515, 12.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7f4b15c0-6ca0-4d92-90a7-d6e21b66e227" absoluteBounds="3.5, 4.25, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/OrmFilmDukkaniDBDataContext/Subeler" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a7e00a1e-945b-45ad-bb38-30ca19ce5802" absoluteBounds="3.515, 4.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.75 : 7.73240397135417); (1.75 : 9.32774983723958); (5.79166666666667 : 9.32774983723958 : JumpStart); (5.95833333333333 : 9.32774983723958 : JumpEnd); (5.97916666666667 : 9.32774983723958 : JumpStart); (6.14583333333333 : 9.32774983723958 : JumpEnd); (6.25 : 9.32774983723958)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/OrmFilmDukkaniDBDataContext/Adresler/Adresler_Calisanlar" />
+      <nodes>
+        <classShapeMoniker Id="41937ed2-b4f7-4654-b2c8-a7b2425c360a" />
+        <classShapeMoniker Id="da329667-b1c7-4721-8004-156406cd20a4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 10.125); (5.875 : 9.75); (5.875 : 4.87580485026042); (6.25 : 4.87580485026042)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/OrmFilmDukkaniDBDataContext/Yonetmenler/Yonetmenler_Filmler" />
+      <nodes>
+        <classShapeMoniker Id="dce51401-b626-4bbb-be25-d01673acd76c" />
+        <classShapeMoniker Id="b4c46ac6-96bf-4f76-ae99-a08c5068eb63" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 2.6249995); (7.25 : 2.6249995); (7.25 : 3.125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/OrmFilmDukkaniDBDataContext/Kategoriler/Kategoriler_Filmler" />
+      <nodes>
+        <classShapeMoniker Id="8e46eab9-f5ab-43a0-b0e1-2651e3e1bf48" />
+        <classShapeMoniker Id="b4c46ac6-96bf-4f76-ae99-a08c5068eb63" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 7.05370198567708); (3.5 : 7.05370198567708)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/OrmFilmDukkaniDBDataContext/Adresler/Adresler_Musteriler" />
+      <nodes>
+        <classShapeMoniker Id="41937ed2-b4f7-4654-b2c8-a7b2425c360a" />
+        <classShapeMoniker Id="f175ab25-43c1-4f26-9ce0-cb47974b7ce2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 12.3118490375601); (6.0625 : 11.7493490375601); (6.0625 : 5.78245927539062); (6.25 : 5.78245927539062)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/OrmFilmDukkaniDBDataContext/Oyuncular/Oyuncular_Filmler" />
+      <nodes>
+        <classShapeMoniker Id="00aae229-99e4-4e35-b4cf-6b7b5f13ee8c" />
+        <classShapeMoniker Id="b4c46ac6-96bf-4f76-ae99-a08c5068eb63" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 5.5744429077524); (5.81607443490112 : 5.89051734265353 : JumpStart); (5.93392556509888 : 6.00836847285128 : JumpEnd); (5.9375 : 6.0119429077524); (5.9375 : 8.38262291861979); (5.97916666666667 : 8.38262291861979 : JumpStart); (6.14583333333333 : 8.38262291861979 : JumpEnd); (6.25 : 8.38262291861979)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/OrmFilmDukkaniDBDataContext/Subeler/Subeler_Calisanlar" />
+      <nodes>
+        <classShapeMoniker Id="7f4b15c0-6ca0-4d92-90a7-d6e21b66e227" />
+        <classShapeMoniker Id="da329667-b1c7-4721-8004-156406cd20a4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 5.25637137900641); (5.79166666666667 : 5.25637137900641 : JumpStart); (5.95833333333333 : 5.25637137900641 : JumpEnd); (6.25 : 5.25637137900641)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/OrmFilmDukkaniDBDataContext/Subeler/Subeler_Filmler" />
+      <nodes>
+        <classShapeMoniker Id="7f4b15c0-6ca0-4d92-90a7-d6e21b66e227" />
+        <classShapeMoniker Id="b4c46ac6-96bf-4f76-ae99-a08c5068eb63" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 5.31814697265625); (3.5 : 5.31814697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/OrmFilmDukkaniDBDataContext/Adresler/Adresler_Subeler" />
+      <nodes>
+        <classShapeMoniker Id="41937ed2-b4f7-4654-b2c8-a7b2425c360a" />
+        <classShapeMoniker Id="7f4b15c0-6ca0-4d92-90a7-d6e21b66e227" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

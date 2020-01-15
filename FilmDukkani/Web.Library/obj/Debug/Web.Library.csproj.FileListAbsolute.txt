@@ -1,0 +1,6 @@
+C:\Users\Fati\Documents\Visual Studio 2013\Projects\FilmDukkani\Web.Library\bin\Debug\Web.Library.dll.config
+C:\Users\Fati\Documents\Visual Studio 2013\Projects\FilmDukkani\Web.Library\bin\Debug\Web.Library.dll
+C:\Users\Fati\Documents\Visual Studio 2013\Projects\FilmDukkani\Web.Library\bin\Debug\Web.Library.pdb
+C:\Users\Fati\Documents\Visual Studio 2013\Projects\FilmDukkani\Web.Library\obj\Debug\Web.Library.csprojResolveAssemblyReference.cache
+C:\Users\Fati\Documents\Visual Studio 2013\Projects\FilmDukkani\Web.Library\obj\Debug\Web.Library.dll
+C:\Users\Fati\Documents\Visual Studio 2013\Projects\FilmDukkani\Web.Library\obj\Debug\Web.Library.pdb

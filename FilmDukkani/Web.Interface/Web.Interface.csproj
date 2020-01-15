@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FF3685A8-2BB0-485C-9B6D-283942DE1998}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Web.Interface</RootNamespace>
+    <AssemblyName>Web.Interface</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="collectionpager, Version=0.0.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\collectionpager.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\Admin\Admin.skin" />
+    <Content Include="App_Themes\Genel\Genel.skin" />
+    <Content Include="User\Interview.aspx" />
+    <Content Include="User\ComparedFilms.aspx" />
+    <Content Include="User\Contact.aspx" />
+    <Content Include="User\Default.aspx" />
+    <Content Include="User\FilmDetail.aspx" />
+    <Content Include="User\Films.aspx" />
+    <Content Include="User\Genel.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\body-bg.gif" />
+    <Content Include="images\coming-soon1.jpg" />
+    <Content Include="images\coming-soon2.jpg" />
+    <Content Include="images\comments.gif" />
+    <Content Include="images\favicon.ico" />
+    <Content Include="images\icons\addtocart.gif" />
+    <Content Include="images\icons\bar_bg.gif" />
+    <Content Include="images\icons\cart.gif" />
+    <Content Include="images\icons\checked.png" />
+    <Content Include="images\icons\compare.gif" />
+    <Content Include="images\icons\details_box_bottom.gif" />
+    <Content Include="images\icons\details_box_center.gif" />
+    <Content Include="images\icons\details_box_top.gif" />
+    <Content Include="images\icons\search2.png" />
+    <Content Include="images\icons\menu_title_bg.gif" />
+    <Content Include="images\icons\menu_title_bg2.gif" />
+    <Content Include="images\icons\products_details_bg.gif" />
+    <Content Include="images\icons\product_box_center.gif" />
+    <Content Include="images\icons\search.gif" />
+    <Content Include="images\icons\search3.ico" />
+    <Content Include="images\icons\sepet.png" />
+    <Content Include="images\image-hover.png" />
+    <Content Include="images\logo.gif" />
+    <Content Include="images\Logo.png" />
+    <Content Include="images\movie1.jpg" />
+    <Content Include="images\movie10.jpg" />
+    <Content Include="images\movie11.jpg" />
+    <Content Include="images\movie12.jpg" />
+    <Content Include="images\movie13.jpg" />
+    <Content Include="images\movie14.jpg" />
+    <Content Include="images\movie15.jpg" />
+    <Content Include="images\movie16.jpg" />
+    <Content Include="images\movie17.jpg" />
+    <Content Include="images\movie18.jpg" />
+    <Content Include="images\movie2.jpg" />
+    <Content Include="images\movie3.jpg" />
+    <Content Include="images\movie4.jpg" />
+    <Content Include="images\movie5.jpg" />
+    <Content Include="images\movie6.jpg" />
+    <Content Include="images\movie7.jpg" />
+    <Content Include="images\movie8.jpg" />
+    <Content Include="images\movie9.jpg" />
+    <Content Include="images\social.gif" />
+    <Content Include="images\stars.gif" />
+    <Content Include="User\InTheaters.aspx" />
+    <Content Include="User\MyCart.aspx" />
+    <Content Include="User\News.aspx" />
+    <Content Include="Script\ie6.css" />
+    <Content Include="Script\js\jquery-1.4.2.min.js" />
+    <Content Include="Script\js\jquery-func.js" />
+    <Content Include="Script\style.css" />
+    <Content Include="User\Search.aspx" />
+    <Content Include="User\TopRated.aspx" />
+    <Content Include="User\MyAccount.aspx" />
+    <Content Include="User\Register.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="User\Interview.aspx.cs">
+      <DependentUpon>Interview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Interview.aspx.designer.cs">
+      <DependentUpon>Interview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\ComparedFilms.aspx.cs">
+      <DependentUpon>ComparedFilms.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\ComparedFilms.aspx.designer.cs">
+      <DependentUpon>ComparedFilms.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\FilmDetail.aspx.cs">
+      <DependentUpon>FilmDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\FilmDetail.aspx.designer.cs">
+      <DependentUpon>FilmDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Films.aspx.cs">
+      <DependentUpon>Films.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Films.aspx.designer.cs">
+      <DependentUpon>Films.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Genel.Master.cs">
+      <DependentUpon>Genel.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Genel.Master.designer.cs">
+      <DependentUpon>Genel.Master</DependentUpon>
+    </Compile>
+    <Compile Include="RssHaberCek\HaberCek.cs" />
+    <Compile Include="User\InTheaters.aspx.cs">
+      <DependentUpon>InTheaters.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\InTheaters.aspx.designer.cs">
+      <DependentUpon>InTheaters.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\MyCart.aspx.cs">
+      <DependentUpon>MyCart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\MyCart.aspx.designer.cs">
+      <DependentUpon>MyCart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\News.aspx.cs">
+      <DependentUpon>News.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\News.aspx.designer.cs">
+      <DependentUpon>News.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User\Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\TopRated.aspx.cs">
+      <DependentUpon>TopRated.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\TopRated.aspx.designer.cs">
+      <DependentUpon>TopRated.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\MyAccount.aspx.cs">
+      <DependentUpon>MyAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\MyAccount.aspx.designer.cs">
+      <DependentUpon>MyAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Admin\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Web.Library\Web.Library.csproj">
+      <Project>{278b9b21-0f89-42bc-bdef-8d60bf5c5cb8}</Project>
+      <Name>Web.Library</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>3591</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:3591/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

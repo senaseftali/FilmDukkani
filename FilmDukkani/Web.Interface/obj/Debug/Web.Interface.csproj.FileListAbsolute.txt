@@ -1,0 +1,16 @@
+c:\users\fati\documents\visual studio 2013\Projects\FilmDukkani\Web.Interface\bin\Web.Interface.dll.config
+c:\users\fati\documents\visual studio 2013\Projects\FilmDukkani\Web.Interface\bin\Web.Interface.dll
+c:\users\fati\documents\visual studio 2013\Projects\FilmDukkani\Web.Interface\bin\Web.Interface.pdb
+c:\users\fati\documents\visual studio 2013\Projects\FilmDukkani\Web.Interface\obj\Debug\Web.Interface.csprojResolveAssemblyReference.cache
+c:\users\fati\documents\visual studio 2013\Projects\FilmDukkani\Web.Interface\obj\Debug\Web.Interface.dll
+c:\users\fati\documents\visual studio 2013\Projects\FilmDukkani\Web.Interface\obj\Debug\Web.Interface.pdb
+C:\Users\Fati\Documents\Visual Studio 2013\Projects\FilmDukkani\Web.Interface\bin\Web.Library.dll
+C:\Users\Fati\Documents\Visual Studio 2013\Projects\FilmDukkani\Web.Interface\bin\Web.Library.pdb
+C:\Users\Fati\Desktop\FilmDukkani\Web.Interface\bin\Web.Interface.dll.config
+C:\Users\Fati\Desktop\FilmDukkani\Web.Interface\bin\Web.Interface.dll
+C:\Users\Fati\Desktop\FilmDukkani\Web.Interface\bin\Web.Interface.pdb
+C:\Users\Fati\Desktop\FilmDukkani\Web.Interface\bin\Web.Library.dll
+C:\Users\Fati\Desktop\FilmDukkani\Web.Interface\bin\Web.Library.pdb
+C:\Users\Fati\Desktop\FilmDukkani\Web.Interface\obj\Debug\Web.Interface.csprojResolveAssemblyReference.cache
+C:\Users\Fati\Desktop\FilmDukkani\Web.Interface\obj\Debug\Web.Interface.dll
+C:\Users\Fati\Desktop\FilmDukkani\Web.Interface\obj\Debug\Web.Interface.pdb
